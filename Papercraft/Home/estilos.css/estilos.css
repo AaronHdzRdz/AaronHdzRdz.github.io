@@ -1,0 +1,87 @@
+h1,h2,h3,h4,li {
+    font-family: "DotGothic16", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    }  
+#nombre {
+        font-family: "DotGothic16", sans-serif;
+        border-right: 2px solid black; /* Simula el cursor */
+        white-space: nowrap; /* Evita que el nombre se desplace a la siguiente línea */
+        overflow: hidden; /* Oculta el contenido que desborda el contenedor */
+        animation: escribir 3s steps(40) forwards; /* Duración de la animación y pasos */
+        }
+        @keyframes escribir {
+        from {
+          width: 0; /* Comienza con un ancho de 0 */
+        }
+        to {
+          width: 100%; /* Finaliza con el ancho completo */
+        }
+        }
+body{
+    background-color: #000000;
+}
+div.container{
+    width: 80%;
+    margin: 0 auto;
+    padding: 0;
+    background-color: hsl(156, 51%, 75%);
+    text-align: center;
+    border-radius: 40px;
+}
+.Regresar{
+    font-family: "DotGothic16", sans-serif;
+    border-radius: 40px;
+    background-color: hsl(0, 0%, 0%);
+    color: hsl(156, 51%, 75%);
+    height: 50px;
+    margin: 15px;
+}
+.perfil{
+    width: 35%;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+}
+
+.proyectos,h4{
+    color: #ff00bf;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+}
+.redes{
+    width: 20%;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+}
+#wave {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+}
+
+.reveal {
+    opacity: 0;
+    transition: opacity 0.5s;
+    }
+    .reveal.active {
+    opacity: 1;
+    }
+#scroll-message {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    transition: opacity 0.5s;
+    opacity: 0;
+    }
+    #scroll-message.hide {
+    opacity: 1;
+    }
