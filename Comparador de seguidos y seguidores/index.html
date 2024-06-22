@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparador de seguidos y seguidores</title>
+    <link rel="icon" href="Logo.png" type="image/png">
+    <meta name="author" content="s_aaronhr" />
+    <meta name="description" content="Herramienta en línea para comparar tus seguidos y seguidores en Instagram, permitiéndote identificar fácilmente quién no te sigue de vuelta.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Comparador de seguidos y seguidores</h1>
+    <p>Para usar esta herramienta...</p>
+    <ol>
+        <li>Ve a tu perfil de Instagram</li>
+        <li>Entra en la sección de seguidos</li>
+        <li>Selecciona todos los perfiles</li>
+        <li>Presiona Ctrl + C para copiar</li>
+        <li>Pega el texto en el cuadro de abajo (seguidos)</li>
+        <li>Repite los pasos anteriores para los seguidores</li>
+        <li>Presiona el botón "Comparar"</li>
+    </ol>
+        <div class="contenedor-textareas">
+            <div class="textarea-container">
+                <h2>Seguidos</h2>
+                <textarea id="seguidosInput" placeholder="Pegar texto de seguidos aquí"></textarea>
+            </div>
+            <div class="textarea-container">
+                <h2>Seguidores</h2>
+                <textarea id="seguidoresInput" placeholder="Pegar texto de seguidores aquí"></textarea>
+            </div>
+        </div>
+        <br><br>
+        <button id="comparar">Comparar</button>
+        <div id="resultados"></div>
+
+        <script src="seguidores.js"></script>
+</body>
+</html>

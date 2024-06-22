@@ -1,0 +1,115 @@
+
+body{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 5%;
+    cursor: url("cursores/puntero.png"), auto;
+}
+
+/* Aplica un ancho máximo al contenido para mejor legibilidad */
+.container {
+    max-width: 600px; /* Ajusta según necesidad */
+    width: 100%;
+    padding: 0 20px; /* Espaciado lateral */
+}
+
+h1,h2, textarea, button, div.resultados, p, li{
+    color: white;
+}
+h1,h2, textarea, button, div.resultados, p, li{
+    font-family: "Pixelify Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2em;
+}
+h1{
+    font-size: 3em;
+    word-wrap: break-word;
+    color: teal;
+}
+    @keyframes typing {
+        from { width: 0; }
+        to { width: 100%; }
+    }
+
+    @keyframes blinkCursor {
+        from { border-right-color: transparent; }
+        to { border-right-color: black; }
+    }
+
+h1 {
+    overflow: hidden; /* Oculta el texto que "aún no se ha escrito" */
+    white-space: nowrap; /* Asegura que el texto se muestre en una sola línea */
+    border-right: .15em solid black; /* Simula el cursor de escritura */
+    width: 0; /* Comienza sin mostrar texto */
+    padding-right: .15em; /* Añade espacio para el cursor */
+    box-sizing: border-box; /* Asegura que el padding se incluya en el cálculo del width */
+    animation: 
+        typing 4s steps(30, end) forwards, /* Animación de "escritura" */
+        blinkCursor .75s step-end infinite; /* Animación del cursor parpadeante */
+}
+tr{
+    width: 100%;
+}
+.contenedor-textareas {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en la siguiente línea en pantallas estrechas */
+}
+
+.textarea-container {
+    /* Ajusta el ancho según necesites, pero debe ser suficiente para ambos en línea */
+    flex: 1;
+    min-width: 250px; /* Ajusta este valor según el punto de quiebre deseado */
+    margin: 10px;
+}
+
+@media (max-width: 600px) { /* Ajusta este valor según el punto de quiebre deseado */
+    .contenedor-textareas {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+/* Estilo por defecto para adaptabilidad en la mayoría de dispositivos */
+textarea {
+    width: 100%; /* Asegura que el textarea se adapte al ancho del contenedor padre */
+    height: auto; /* Altura automática para adaptabilidad */
+    min-height: 15rem; /* Altura mínima para asegurar visibilidad */
+    box-sizing: border-box; /* Incluye el padding y border en el cálculo del ancho y alto */
+    padding: 10px;
+    border: none;
+    border-radius: 2rem;
+    resize: none;
+    background-color: rgba(128, 128, 128, 0.25);
+}
+
+/* Media query para pantallas grandes (computadoras) */
+@media (min-width: 1024px) {
+    textarea {
+        height: 30rem; /* Altura específica para computadoras */
+    }
+}
+
+/* Media query para pantallas pequeñas (teléfonos) */
+@media (max-width: 480px) {
+    textarea {
+        height: 10rem; /* Altura específica para teléfonos */
+    }
+}
+button{
+    background-color: transparent;
+    color: #4CAF50;
+    padding: 14px 20px;
+    border: 2px solid #4CAF50;
+    cursor: pointer;
+    border-radius: 2rem;
+}
+button:hover {
+    background-color: #4CAF50;
+    color: white;
+}
