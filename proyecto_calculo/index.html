@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optimización de la Producción y Ventas en Celia Uniformes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="icon" href="https://fav.farm/📊" />
+</head>
+<body>
+    <header>
+        <h1>Optimización de la Producción y Ventas en Celia Uniformes</h1>
+        <p>Un enfoque matemático para maximizar ganancias</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#objetivo">Objetivo</a></li>
+            <li><a href="#justificacion">Justificación</a></li>
+            <li><a href="#marco-teorico">Marco Teórico</a></li>
+            <li><a href="#metodologia">Metodología</a></li>
+            <li><a href="#ejemplo">Ejemplo Numérico</a></li>
+            <li><a href="#resultados">Resultados</a></li>
+            <li><a href="#conclusiones">Conclusiones</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="objetivo">
+            <h2>🎯 Objetivo</h2>
+            <p>Determinar el número óptimo de suéteres que deben producirse y venderse diariamente para maximizar las ganancias del negocio familiar, utilizando herramientas de cálculo diferencial.</p>
+        </section>
+        <section id="justificacion">
+            <h2>💡 Justificación</h2>
+            <p>En el negocio familiar de Celia Uniformes, optimizar la producción puede aumentar las ganancias y reducir costos innecesarios. Con este proyecto, se aplicarán conceptos matemáticos para encontrar un equilibrio entre los costos de producción, las ventas y los ingresos, obteniendo un modelo matemático práctico.</p>
+        </section>
+        <section id="marco-teorico">
+            <h2>📚 Marco Teórico</h2>
+            <h3>Funciones involucradas</h3>
+            <ul>
+                <li>
+                    <strong>Costo de producción (C(x)):</strong>
+                    <p>Representa el costo total de producir x suéteres. Incluye costos fijos y variables.</p>
+                    <p>Ejemplo: $$C(x) = 150x + 500$$</p>
+                    <p>Donde:</p>
+                    <ul>
+                        <li>150x: costo variable (precio por suéter)</li>
+                        <li>500: costo fijo diario (electricidad, renta, etc.)</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Ingreso por ventas (I(x)):</strong>
+                    <p>Representa el dinero obtenido al vender x suéteres.</p>
+                    <p>Ejemplo: $$I(x) = 300x$$</p>
+                    <p>Donde 300 es el precio promedio de venta de cada suéter.</p>
+                </li>
+                <li>
+                    <strong>Ganancia total (G(x)):</strong>
+                    <p>Representa la diferencia entre el ingreso y el costo.</p>
+                    <p>$$G(x) = I(x) - C(x)$$</p>
+                </li>
+            </ul>
+            <h3>Máximos y mínimos de una función</h3>
+            <p>Para maximizar la ganancia, se utiliza la primera derivada de G(x):</p>
+            <ul>
+                <li>La derivada (G'(x)) se iguala a 0 para encontrar puntos críticos.</li>
+                <li>Se verifica si es un máximo con la segunda derivada (G''(x)).</li>
+            </ul>
+        </section>
+        <section id="metodologia">
+            <h2>🔍 Metodología</h2>
+            <ol>
+                <li>
+                    <strong>Identificar las funciones:</strong>
+                    <ul>
+                        <li>Determinar los costos fijos y variables del negocio.</li>
+                        <li>Estimar el precio promedio de venta de un suéter.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Definir la función de ganancia:</strong>
+                    <p>Sustituir las funciones de costos e ingresos en la ecuación: $$G(x) = I(x) - C(x)$$</p>
+                </li>
+                <li>
+                    <strong>Derivar la función:</strong>
+                    <ul>
+                        <li>Calcular la primera derivada G'(x): $$G'(x) = I'(x) - C'(x)$$</li>
+                        <li>Resolver $$G'(x) = 0$$ para encontrar x (punto crítico).</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Verificar el máximo:</strong>
+                    <p>Usar la segunda derivada G''(x). Si $$G''(x) < 0$$, el punto crítico es un máximo.</p>
+                </li>
+                <li>
+                    <strong>Interpretar resultados:</strong>
+                    <ul>
+                        <li>Calcular el número óptimo de suéteres a producir y vender.</li>
+                        <li>Determinar la ganancia máxima.</li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
+        <section id="ejemplo">
+            <h2>🧮 Ejemplo Numérico</h2>
+            <h3>Datos del negocio:</h3>
+            <ul>
+                <li>Costo fijo diario: 500 pesos</li>
+                <li>Costo por suéter: 150 pesos</li>
+                <li>Precio de venta por suéter: 300 pesos</li>
+            </ul>
+            <h3>Funciones:</h3>
+            <ul>
+                <li>Costo de producción: $$C(x) = 150x + 500$$</li>
+                <li>Ingreso por ventas: $$I(x) = 300x$$</li>
+                <li>Ganancia total: $$G(x) = I(x) - C(x) = 300x - (150x + 500)$$</li>
+            </ul>
+            <p>Simplificando: $$G(x) = 150x - 500$$</p>
+            <h3>Derivada de la ganancia:</h3>
+            <p>Primera derivada: $$G'(x) = 150$$</p>
+            <p>Como G'(x) es constante y positiva, la ganancia aumenta linealmente. Para maximizar la producción, se deben considerar restricciones externas, como capacidad de producción o demanda.</p>
+            <h3>Análisis avanzado con restricciones</h3>
+            <p>Si se considera una restricción de capacidad máxima de 15 suéteres diarios, la ganancia óptima es:</p>
+            <p>$$G(15) = 150(15) - 500 = 2250 - 500 = 1750$$ pesos diarios</p>
+        </section>
+        <section id="resultados">
+            <h2>📊 Resultados Esperados</h2>
+            <ul>
+                <li>La cantidad óptima de suéteres a producir diariamente (según demanda y capacidad).</li>
+                <li>El máximo beneficio que puede obtenerse bajo las condiciones actuales.</li>
+            </ul>
+        </section>
+        <section id="conclusiones">
+            <h2>🏁 Conclusiones</h2>
+            <p>Este proyecto demuestra cómo las herramientas de cálculo pueden aplicarse para tomar decisiones en un negocio real. Optimizar la producción ayuda a maximizar las ganancias y mejorar la eficiencia del negocio.</p>
+        </section>
+    </main>
+</body>
+</html>

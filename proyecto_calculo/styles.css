@@ -1,0 +1,390 @@
+:root {
+    --primary-color: #6200ee;
+    --secondary-color: #03dac6;
+    --background-color: #121212;
+    --surface-color: #1e1e1e;
+    --text-color: #ffffff;
+    --text-secondary-color: #b3b3b3;
+    --hover-color: #bb86fc;
+    --accent-color: #cf6679;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.8;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    background-image: 
+        radial-gradient(circle at 10% 20%, rgba(98, 0, 238, 0.1) 0%, transparent 20%),
+        radial-gradient(circle at 90% 80%, rgba(3, 218, 198, 0.1) 0%, transparent 20%);
+    background-attachment: fixed;
+}
+
+header {
+    background-color: rgba(30, 30, 30, 0.8);
+    color: var(--text-color);
+    text-align: center;
+    padding: 3rem 2rem;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color), var(--accent-color));
+    animation: rainbow 6s linear infinite;
+}
+
+@keyframes rainbow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+header p {
+    font-size: 1.3rem;
+    opacity: 0.9;
+    color: var(--secondary-color);
+}
+
+nav {
+    background-color: rgba(30, 30, 30, 0.8);
+    padding: 0.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 0.5rem;
+}
+
+nav ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+nav ul li a:hover {
+    background-color: var(--hover-color);
+    color: var(--background-color);
+    box-shadow: 0 0 15px rgba(187, 134, 252, 0.7);
+}
+
+main {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+section {
+    margin-bottom: 2rem;
+    background-color: rgba(30, 30, 30, 0.8);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+}
+
+section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+}
+
+section:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+h1, h2, h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 2.2rem;
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+h3 {
+    font-size: 1.8rem;
+    color: var(--accent-color);
+}
+
+ul, ol {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-secondary-color);
+}
+
+ul {
+    list-style-type: none;
+}
+
+ol {
+    counter-reset: item;
+    list-style-type: none;
+}
+
+ol li {
+    counter-increment: item;
+}
+
+ol li::before {
+    content: counter(item) '.';
+    color: var(--primary-color);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+
+li {
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 1.5rem;
+    transition: transform 0.2s ease;
+}
+
+li:hover {
+    transform: translateX(5px);
+}
+
+
+p {
+    margin-bottom: 1rem;
+    color: var(--text-secondary-color);
+}
+
+footer {
+    background-color: rgba(30, 30, 30, 0.8);
+    color: var(--text-color);
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    backdrop-filter: blur(10px);
+}
+
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 0.25rem 0;
+    }
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+section {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Estilos para fórmulas matemáticas */
+.MathJax {
+    font-size: 1.2em !important;
+    color: var(--secondary-color) !important;
+}
+
+/* Estilos adicionales para mejorar la legibilidad */
+strong {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--hover-color);
+    text-decoration: underline;
+}
+
+/* Estilo para resaltar código o fórmulas en línea */
+code {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: 'Fira Code', 'Courier New', Courier, monospace;
+    color: var(--accent-color);
+    transition: background-color 0.3s ease;
+}
+
+code:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+
+/* Estilo para tablas */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+th, td {
+    text-align: left;
+    padding: 12px;
+    background-color: rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+}
+
+th {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+tr:hover td {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Estilo para citas */
+blockquote {
+    border-left: 4px solid var(--secondary-color);
+    padding-left: 1rem;
+    margin: 1rem 0;
+    font-style: italic;
+    color: var(--text-secondary-color);
+    position: relative;
+    overflow: hidden;
+}
+
+blockquote::before {
+    content: '"';
+    position: absolute;
+    top: -20px;
+    left: -10px;
+    font-size: 5em;
+    color: rgba(3, 218, 198, 0.1);
+    font-family: 'Georgia', serif;
+}
+
+/* Estilo para botones */
+.btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+}
+
+.btn:hover {
+    background-color: var(--hover-color);
+    box-shadow: 0 0 10px rgba(187, 134, 252, 0.5);
+}
+
+.btn-container {
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+/* Estilo para imágenes (si las agregas en el futuro) */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.05);
+}
+
+/* Mejora en la accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+    *, ::before, ::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* Mejora en el contraste para una mejor legibilidad */
+@media (prefers-contrast: more) {
+    :root {
+        --text-color: #ffffff;
+        --text-secondary-color: #e0e0e0;
+    }
+}
+
